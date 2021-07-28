@@ -1,5 +1,5 @@
 {
-  "name": "tsconfig-paths",
+  "name": "tsconfig-paths-demisto",
   "version": "3.10.2",
   "description": "Load node modules according to tsconfig paths, in run-time or via API.",
   "main": "lib/index.js",
