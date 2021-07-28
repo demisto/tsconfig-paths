@@ -3,7 +3,7 @@ import { configLoader, ExplicitParams } from "./config-loader";
 import { options } from "./options";
 
 interface IMatchCase {
-  [key: string]: string;
+  [key: string]: string | undefined;
 }
 
 const noOp = (): void => void 0;
