@@ -3,12 +3,12 @@ import { configLoader, ExplicitParams } from "./config-loader";
 import { options } from "./options";
 
 interface IMatchCase {
-  [key: string]: string | undefined;
+  [key: string]: string;
 }
 
 const noOp = (): void => void 0;
 const matchCache: IMatchCase = {};
-const NOT_MATCH_FOR_CACHE = "NO_TYPESCRIPT";
+const NOT_MATCH_FOR_CACHE = "NO_MATCH";
 
 function getCoreModules(
   builtinModules: string[] | undefined
