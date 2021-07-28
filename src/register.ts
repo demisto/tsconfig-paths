@@ -91,7 +91,7 @@ export function register(explicitParams: ExplicitParams): () => void {
         matchCache[request] = found || NOT_MATCH_FOR_CACHE;
       }
       if (found && found !== NOT_MATCH_FOR_CACHE) {
-        const modifiedArguments = [found].concat([].slice.call(arguments, 1)); // Passes all arguments. Even those that is not specified above.
+        const modifiedArguments = [found, ...[].slice.call(arguments, 1)]; // Passes all arguments. Even those that is not specified above.
         // tslint:disable-next-line:no-invalid-this
         return originalResolveFilename.apply(this, modifiedArguments);
       }
